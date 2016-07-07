@@ -1,8 +1,6 @@
 set nocompatible
 filetype off
 syntax enable
-set background=dark
-colorscheme solarized
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'tpope/vim-fugitive'
@@ -25,18 +23,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-bundler'
 Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()            " required
-filetype plugin indent on    " required
-set softtabstop=0
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set smartindent
-set smarttab
-let mapleader=','
-call togglebg#map("<F5>")
-nmap <Leader>o :set nopaste<CR>
-nmap <Leader>p :set paste<CR>
-map <Leader>n i^M^[k$
-map <Leader>tn i^M  ^[k$
-nmap <F8> :TagbarToggle<CR>
-nmap <C-o> o<Esc>
+function! SetupScript()
+  VundleInstall
+  q!
+  q!
+endfunction
+
