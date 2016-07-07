@@ -40,3 +40,8 @@ map <Leader>n i^M^[k$
 map <Leader>tn i^M  ^[k$
 nmap <F8> :TagbarToggle<CR>
 nmap <C-o> o<Esc>
+function! SetupScript()
+  VundleInstall
+  q!
+  q!
+endfunction
