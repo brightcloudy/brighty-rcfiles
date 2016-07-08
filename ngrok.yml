@@ -1,0 +1,9 @@
+tunnels:
+  ngrokmon:
+    proto: http
+    addr: 4040
+    hostname: ngrok.pega.sexy
+  localssh:
+    proto: tcp
+    addr: 22
+    remote_addr: 1.tcp.ngrok.io:20482
